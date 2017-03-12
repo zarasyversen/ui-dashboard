@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Example - Web App Design</title>
+  <!-- PLEASE NOTE THAT THIS IS DESIGNED BY MASON YARNELL, FOUND ON DRIBBLE (https://dribbble.com/shots/1315388-Dashboard-Web-App-Product-UI-Design-Job-Summary), I BUILT THE CODE -->
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="core.css">
+</head>
+<body>
+  <div class="wrap">
+    <!-- MAIN MENU // SIDEBAR MENU -->
+    <nav class="menu">
+      <img src="img/zara.jpg" alt="profile picture" class="profile-pic"/>
+      <h2 class="profile-name">Zara Syversen <i class="fa fa-angle-down" aria-hidden="true"></i></h2>
+      <!-- MENU SECTION // MAIN -->
+      <ul class="menu-list">
+        <li>
+          <h3 class="section-title">Main</h3>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+        </li>    
+        <li class="menu-item" id="job-item" >
+          <div class="menu-title">
+            <i class="fa fa-briefcase" aria-hidden="true"></i> Job 
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul class="submenu job-menu">
+            <li class="submenu-item">
+              <a href="#">New</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">In Progress</a>
+            </li>
+            <li class="submenu-item">
+              <a href="#">Completed</a>
+            </li>
+          </ul>
+        </li>    
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-file-text-o" aria-hidden="true"></i> Resumes</a>
+        </li>    
+        <li class="menu-item">
+          <div class="menu-title" id="task-item">
+            <i class="fa fa-check-square-o" aria-hidden="true"></i> Tasks <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </div>
+          <ul class="submenu task-menu">
+            <li class="submenu-item"><a href="#">New Task</a></li>
+            <li class="submenu-item"><a href="#">In Progress</a></li>
+            <li class="submenu-item"><a href="#">Completed</a></li>
+            <li class="submenu-item"><a href="#">History</a></li>
+          </ul>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-calendar" aria-hidden="true"></i> Calendar</a>
+        </li>        
+      </ul>
+      <!-- MENU SECTION // ADMIN -->
+      <ul class="menu-list">
+        <li>
+          <h3 class="section-title">Admin</h3>
+        <li>
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-user" aria-hidden="true"></i> Users</a>
+        </li>    
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-map-marker" aria-hidden="true"></i> Locations</a>
+        </li>    
+        <li class="menu-item">
+          <a href="#" class="menu-title"><i class="fa fa-bar-chart" aria-hidden="true"></i> Workflows</a>
+        </li>    
+        <li class="menu-item li-active">
+          <a href="#" class="menu-title"><i class="fa fa-thumb-tack" aria-hidden="true"></i> Job Boards</a>
+        </li>
+        <li class="menu-item">
+        <a href="#" class="menu-title"><i class="fa fa-thumbs-up" aria-hidden="true"></i> Social</a>
+        </li>        
+      </ul> 
+    </nav><!--menu end -->
+
+    <!-- TOP BAR // HAMBURGER, SEARCH BAR, USER BUTTONS -->
+    <div class="top-bar">
+      <a href="#" id="menuTrigger" class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </a>
+      <div class="search-bar">
+        <i id="search-button" class="fa fa-search search-button" aria-hidden="true"></i>
+        <input class="search-field" type="text" name="search" placeholder="Search for a job, task or resume...">
+      </div>
+      <div class="buttons">
+        <button type="button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></button>
+        <button type="button"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+        <button type="button"><i class="fa fa-user-plus" aria-hidden="true"></i></button>
+      </div>
+    </div> <!--top bar -->
+
+    <div class="container">
+      <main>
+
+      <!-- TOP POST BAR // TITLE AND POST NAV -->
+        <div class="top-post-bar">
+          <div class="post-title">
+            <h1>Customer Service Representative</h1>
+            <p> 
+              <i class="fa fa-map-marker" aria-hidden="true"></i> Brighton, UK. 
+              <a href="#">Preview this post</a>
+            </p>
+          </div><!--end // post-title -->
+          <nav class="post-nav">
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-bookmark" aria-hidden="true"></i></a>
+              </li>
+              <li class="open-button">
+                <a href="#"><i class="fa fa-circle" aria-hidden="true"></i> OPEN</a>
+              </li>
+            </ul>
+          </nav><!--end // post-nav -->
+          <div class="clear-fix"></div>
+        </div><!--END TOP POST BAR -->
+
+      <!-- POST NAVIGATION // OPTIONS -->
+        <nav class="post-options">
+          <ul>
+            <li class="options option-active">
+              <a href="#">SUMMARY</a>
+            </li>
+            <li class="options">
+              <a href="#">APPLICANTS</a>
+            </li>
+            <li class="options">
+              <a href="#">JOB BOARD</a>
+            </li>
+            <li class="options">
+              <a href="#">INTERVIEWS</a>
+            </li>
+            <li class="options">
+              <a href="#">ACTIVITY</a>
+            </li>
+            <li class="options">
+              <a href="#">BROADCAST</a>
+            </li>
+            <li class="options">
+              <a href="#">NOTIFICATIONS</a>
+            </li>
+          </ul>
+        </nav><!--END POST NAVIGATION -->
+
+        <div class="dashboard">
+          <!-- 1ST PART / MAIN DASHBOARD -->
+          <!-- DASH STATS // IMAGE -->
+          <div class="dash-stats active-stats">
+            <div class="image-wrapper">
+              <img src="img/dash-stats.PNG" alt="dashstats" />
+            </div><!--end image wraper -->
+            <div class="stats-btns">
+              <button class="btn1">TOTALS - Out of 5,231 views</button>
+              <button class="btn2">APPLICANTS / DAY</button>
+              <div class="clear-fix"></div>
+            </div><!-- end stats-btns-->
+          </div>  <!-- end dash stats -->
+
+          <!-- BUTTON TO OPEN DASH-STATS-->
+          <div class="dash-stats-btn">
+            <button id="d-stats" class="active-dash-btn"></button>
+          </div>
+
+          <!-- 2ND PART / MAIN DASHBOARD -->
+          <div class="dash-profile">
+            <div class="dash-jobdesc">
+              <ul>
+                <!-- TITLE TOP // Job Description -->
+                <li class="jobdesc-title">Job Description 
+                  <button><i class="fa fa-pencil" aria-hidden="true"></i> EDIT</button>
+                </li>
+                <!-- DETAILS // Job Description -->
+                <li class="sub-details">
+                  <h2>Position Title</h2>
+                  <p>Customer Service Representative</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Location</h2>
+                  <p>San Francisco, CA</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Employment Type</h2>
+                  <p>Full-time</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Experience</h2>
+                  <p>Mid-level</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Status</h2>
+                  <p>Open</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Description</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Hiring Lead</h2>
+                  <p>Tom Tizzy</p>
+                </li>
+                <li class="sub-details">
+                  <h2>Approved Salary</h2>
+                  <p>£58,000</p>
+                </li>
+              </ul>
+            </div><!-- end dash-jobdesc -->
+            <div class="dash-sidebar">
+              <div class="sidebar-btns">
+                <button class="fb"><i class="fa fa-facebook" aria-hidden="true"></i> Post to Facebook</button>
+                <button class="tw"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet this Job</button>
+                <button class="lnkin"><i class="fa fa-linkedin-square" aria-hidden="true"></i> Post to Linkedin</button>
+              </div>
+              <div class="sidebar-push">
+                <h2><i class="fa fa-globe" aria-hidden="true"></i> Link to this Job</h2>
+                <p>Lorem ipsum a little sentence right here so we can fill out some space. Lorem ipsum a little sentence right here so we can fill out some space. </p>
+                <div class="sidebar-input">
+                <input type="text" name="joblink" placeholder="http://pretendlink.com">
+                <button>Copy</button>
+                <div class="clear-fix"></div>
+                </div><!--end sidebar-input -->
+              </div><!--end sidebar-push -->
+              <div class="sidebar-push">
+                <h2><i class="fa fa-hand-peace-o" aria-hidden="true"></i> Use the Button Widget</h2>
+                <p>This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+                <div class="sidebar-input">
+                  <input type="text" name="joblink" placeholder="http://pretendlink.com">
+                  <button>Copy</button>
+                  <div class="clear-fix"></div>
+                </div><!--end sidebar-input -->
+              </div><!--end sidebar-push -->
+              <div class="sidebar-push-last">
+                <h2><i class="fa fa-paper-plane" aria-hidden="true"></i> Upload Resumes by Email</h2>
+                <p>You can automatically upload multiple resumes to this job by emailing the address below.</p>
+                <div class="sidebar-input-last">
+                <input type="text" name="joblink" placeholder="tomtizzy@gmail.com">
+                </div><!--end sidebar-input-last -->
+              </div><!--end sidebar-push-last-->
+            </div><!-- end dash-sidebar -->
+            <div class="clear-fix"></div>
+          </div><!-- end dash profile -->
+        </div><!-- END DASHBOARD -->
+      </main>
+      <footer>
+        <a href="https://dribbble.com/shots/1315388-Dashboard-Web-App-Product-UI-Design-Job-Summary" target="_blank">Designed by Mason Yarnell</a><a href="http://www.zarasyversen.com" target="_blank">Built by Zara</a>
+      </footer>
+    </div><!-- END CONTAINER -->
+  </div><!--AND THAT IS A WRAP FOLKS-->
+
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> jQuery lib-->
+  <script>
+
+  //HAMBURGER ANIMATION -- JQUERY
+    // $(document).ready(function(){
+    //   $(".hamburger").click(function(){
+    //       $(this).toggleClass("open");
+    //   });
+
+    //   $('#mobMenu li a').click(function(){
+    //       $('.hamburger').toggleClass("open");
+    //   });
+    // });
+
+
+  //TIME FOR SOME PURE JS YAY
+
+  //TOGGLE TO OPEN MENU 
+  document.getElementById('menuTrigger').addEventListener('click', function () {
+    const menuOpen = document.querySelector('.menu');
+    const mainContainer = document.querySelector('.container');
+    const topBar = document.querySelector('.top-bar');
+    const hamBurger = document.querySelector('.hamburger');
+    menuOpen.classList.toggle('open');
+    mainContainer.classList.toggle('container80');
+    topBar.classList.toggle('top-bar-open');
+    hamBurger.classList.toggle('open-menu');
+
+  });
+
+  //TOGGLE TO OPEN SUB MENUS
+  document.getElementById('job-item').addEventListener('click', function () {
+    const jobMenu = document.querySelector('.job-menu');
+    jobMenu.classList.toggle('open-sub')
+  });
+
+  document.getElementById('task-item').addEventListener('click', function () {
+    const taskMenu = document.querySelector('.task-menu');
+    taskMenu.classList.toggle('open-sub')
+  });
+
+
+  //TOGGLE TO OPEN STATS
+  document.getElementById('d-stats').addEventListener('click', function () {
+    const dashStats = document.querySelector('.dash-stats');
+    const dashButton = document.querySelector('#d-stats');
+    dashStats.classList.toggle('active-stats');
+    dashButton.classList.toggle('active-dash-btn');
+  });
+
+  //TOGGLE TO OPEN SEARCH BAR ON MOBILE
+  const searchField = document.querySelector('.search-field')
+  document.getElementById('search-button').addEventListener('click', function () {
+  searchField.classList.toggle('search-open');
+  })
+  </script>
+</body>
+</html>
